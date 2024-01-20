@@ -59,7 +59,7 @@ class Traceroute
         {
             replies = await allTasks;
         }
-        //I intentionally did not observe all the exceptions when using here. I felt it is
+        //I intentionally did not observe all the exceptions here. I felt it is
         //sufficient to respond to only the first error that was thrown, rather than all of them
         catch(PingException e)
         {
