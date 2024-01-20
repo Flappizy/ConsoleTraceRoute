@@ -1,4 +1,4 @@
-﻿using System.Net.NetworkInformation;
+using System.Net.NetworkInformation;
 using System.Text.RegularExpressions;
 
 class Traceroute
@@ -71,6 +71,8 @@ class Traceroute
             else
             {
                 Console.WriteLine($"Hop {i + 1}: Address: {reply.Address} Status: {reply.Status} RTT: {reply.RoundtripTime}");
+
+                Console.WriteLine($"Hop {i + 1}: Status: {reply.Status}");
             }
 
             if (reply.Status == IPStatus.Success || reply.Status == IPStatus.DestinationHostUnreachable)
